@@ -1,0 +1,9 @@
+---
+api_task_name: "API Task"
+api_method: "GET"
+api_body_format: "json"
+api_force_basic_auth: True
+api_status_code: "200"
+api_base_url: ""
+api_url_path: ""
+api_register_var: "api_results"
