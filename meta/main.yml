@@ -1,6 +1,6 @@
 galaxy_info:
   author: "Andrew J. Huffman"
-  description: "An Ansible role to avoid having to fill in repetitive parameters when writing a playbook with multiple API calls.  This role wraps around the Ansible uri module."
+  description: "Avoid having to fill in repetitive parameters when writing a playbook with multiple API calls."
   company: "Red Hat"
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
