@@ -1,7 +1,7 @@
 galaxy_info:
   author: "Andrew J. Huffman"
   description: "An Ansible role to avoid having to fill in repetitive parameters when writing a playbook with multiple API calls.  This role wraps around the Ansible uri module."
-
+  company: "Red Hat"
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
   # issue_tracker_url: http://example.com/issue/tracker
@@ -31,17 +31,22 @@ galaxy_info:
   #
   # platforms is a list of platforms, and each platform has a name and a list of versions.
   #
-  # platforms:
-  # - name: Fedora
-  #   versions:
-  #   - all
-  #   - 25
-  # - name: SomePlatform
-  #   versions:
-  #   - all
-  #   - 1.0
-  #   - 7
-  #   - 99.99
+  platforms:
+    - name: "EL"
+      versions:
+        - "all"
+    - name: "Fedora"
+      versions:
+        - "all"
+    - name: "Ubuntu"
+      versions:
+        - "all"
+    - name: "Amazon"
+      versions:
+        - "all"
+    - name: "Debian"
+      versions:
+        - "all"
 
   galaxy_tags:
     - "api"
@@ -53,6 +58,6 @@ galaxy_info:
     # NOTE: A tag is limited to a single word comprised of alphanumeric characters.
     #       Maximum 20 tags per role.
 
-#dependencies: []
+dependencies: []
   # List your role dependencies here, one per line. Be sure to remove the '[]' above,
   # if you add dependencies to this list.
