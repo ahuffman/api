@@ -27,7 +27,11 @@ Where the default value "omit" is noted, refer to the Ansible [`uri`](https://do
 |api_url_path|no|The extended path of the URL that you would like to perform requests against|string|""|
 |api_user|no|User for your API request|string|omit|
 |api_validate_certs|no|Whether or not to validate SSL certificates|boolean|omit|
-|api_register_var|no|Variable to register task results.|string|"api_results"|
+
+## Returned Variables
+This role returns the results of API requests with a variable called `api_results`.  Prior to Ansible 2.8 the `register` keyword was templatable and we utilized a variable called `api_register_var`.  Unfortunately this is no longer functional in Ansible 2.8.  
+
+To retrieve the results of an API request, simply reference `api_results` after instantiating this role.
 
 ## Example Playbook
 ```yaml
@@ -44,11 +48,10 @@ Where the default value "omit" is noted, refer to the Ansible [`uri`](https://do
             api_task_name: "Get some data from webservice"
             api_url_path: "api/hosts"
             api_body: "{\"search\": \"myhostname.mydomain.com\"}"  #for large bodies, use a template lookup here
-            api_register_var: "host_query"
 
         - name: "Output results"
           debug:
-            var: "host_query"
+            var: "api_results"
 ```
 ## License
 [MIT](LICENSE)

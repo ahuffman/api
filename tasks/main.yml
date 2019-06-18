@@ -20,4 +20,4 @@
     url: "{{ api_base_url }}/{{ api_url_path }}"
     user: "{{ api_user | default(omit) }}"
     validate_certs: "{{ api_validate_certs | default(omit) }}"
-  register: "{{ api_register_var }}"
+  register: "api_results"
