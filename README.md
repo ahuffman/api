@@ -1,3 +1,5 @@
+![Ansible Role](https://img.shields.io/ansible/role/d/28010)
+
 # ahuffman.api
 An Ansible role to avoid having to fill in repetitive parameters when writing a playbook with multiple API calls.  This role wraps around the Ansible [`uri`](https://docs.ansible.com/ansible/latest/modules/uri_module.html#uri-module) module.  This helps reduce tedious playbook writing and makes the overall playbook more readable while reducing repetitive lines of code.
 
